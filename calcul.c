@@ -6,14 +6,15 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 14:45:37 by nvillase          #+#    #+#             */
-/*   Updated: 2023/04/27 14:51:09 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/05/31 22:56:59 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 void calcul(t_l *l)
-{	int	q;
+{	
+	int	q;
 
 	l->m = l->th / 2;
 	q = l->m / 2;

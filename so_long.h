@@ -25,15 +25,36 @@ typedef struct	s_l
 	void	*TH;
 	int		m;
 	int		x;
+	void	*gB;
+	void	*jd;
+	void	*eu;
+	void	*po;
+	int		keycode;
+	int		z;
+	int		y;
+
 }				t_l;
 
 int		fermer_esc(int keyboard);
-void	create_map(t_l *l);
+int 	fermer_croix(void);
+void	create_map(t_l *l, const char *map_path);
 void	full_img(t_l *l);
 void	print_angle(t_l *l);
 void	print_ligne(t_l *l);
 void	print_vertical(t_l *l);
-int		main(void);
+int		main(int ac, char **av);
 void	calcul(t_l *l);
+int		secu_1(t_l *l);
+int		secu_v(t_l *l);
+int 	secu_rec(t_l *l);
+void	coll_ballon(t_l *l);
+void	perso(t_l *l);
+void	brain(t_l *l);
+void	haut_perso(t_l *l);
+int 	keys(int keycode, t_l *l);
+void	bas_perso(t_l *l);
+void	gauche_perso(t_l *l);
+void	droite_perso(t_l *l);
+int		secu_all(t_l *l);
 
 #endif

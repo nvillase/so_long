@@ -7,7 +7,10 @@ RM = rm -f
 SRCS =  calcul.c \
 		create_map.c \
 		key.c \
-		main.c
+		main.c \
+		secu.c \
+		game.c \
+		deplace.c
 OBJS = $(SRCS:.c=.o)
 CMD = -L ./include/libft/ -lft -L ./include/mlx -lmlx -lXext -lX11 -lm -lbsd
 
@@ -33,4 +36,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
- 

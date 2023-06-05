@@ -6,19 +6,19 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 14:40:33 by nvillase          #+#    #+#             */
-/*   Updated: 2023/04/27 14:50:53 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/06/05 17:34:00 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void create_map(t_l *l)
+void create_map(t_l *l, const char *map_path)
 {
 	int		i;
 	int		fd;
 	char	*buffer;
 
-	fd = open ("./map/map.ber", O_RDONLY);
+	fd = open (map_path, O_RDONLY);
 	if (fd < 0)
 		return ;
 	buffer = (char *)malloc(sizeof(char) * 10000);
@@ -48,6 +48,10 @@ void full_img(t_l *l)
 	l->LVPt = mlx_xpm_file_to_image(l->mp, "./m/LVPt.xpm", &a, &a);
 	l->TB = mlx_xpm_file_to_image(l->mp, "./m/TB.xpm", &a, &a);
 	l->TH = mlx_xpm_file_to_image(l->mp, "./m/TH.xpm", &a, &a);
+	l->gB = mlx_xpm_file_to_image(l->mp, "./m/gB.xpm", &a, &a);
+	l->jd = mlx_xpm_file_to_image(l->mp, "./m/jd.xpm", &a, &a);
+	l->eu = mlx_xpm_file_to_image(l->mp, "./m/eu.xpm", &a, &a);
+	l->po = mlx_xpm_file_to_image(l->mp, "./m/po.xpm", &a, &a);
 	return ;
 }
 void print_angle(t_l *l)
