@@ -6,7 +6,7 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:03:23 by nvillase          #+#    #+#             */
-/*   Updated: 2023/06/08 11:56:21 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/06/08 16:24:41 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,16 +116,16 @@ void	haut_perso(t_l *l)
 
 int	end(t_l *l)
 {
-	// int	i;
+	int	i;
 
-	// i = -1;
-	// while (++i < l->tv)
-	// 	free(l->map);
-	// mlx_clear_window(l->mp, l->wp);
-	// mlx_destroy_window(l->mp, l->wp);
-	// destroy_image(l);
-	// mlx_destroy_display(l->mp);
-	// free(l->mp);
+	i = -1;
+	while (++i < l->tv)
+		free(l->map);
+	destroy_image(l);
+	mlx_destroy_display(l->mp);
+	mlx_clear_window(l->mp, l->wp);
+	mlx_destroy_window(l->mp, l->wp);
+	free(l->mp);
 	ft_printf("Fini bien joue a toi mon grand\ntu as fini en %d coups\n", l->c_d);
 	exit (0);
 	return (0);
