@@ -6,7 +6,7 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 14:56:42 by nvillase          #+#    #+#             */
-/*   Updated: 2023/02/15 09:21:14 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/06/08 17:32:47 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 			dest[i] = src[i];
 			i++;
 		}
-			dest[i] = 0;
+		dest[i] = 0;
 	}
 	while (src[i])
-			i++;
+		i++;
 	return (i);
 }
