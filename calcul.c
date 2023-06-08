@@ -6,17 +6,39 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 14:45:37 by nvillase          #+#    #+#             */
-/*   Updated: 2023/05/31 22:56:59 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/06/08 11:19:57 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void calcul(t_l *l)
-{	
+void	calcul(t_l *l)
+{
 	int	q;
 
 	l->m = l->th / 2;
 	q = l->m / 2;
 	l->x = (q / 2) + 2;
+}
+
+int	n_c(t_l *l)
+{
+	int	i;
+	int	j;
+
+	l->cn = 0;
+	i = 0;
+	j = 0;
+	while (l->map[i])
+	{
+		while (l->map[i][j])
+		{
+			if (l->map[i][j] == 'C')
+				l->cn++;
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	return (0);
 }

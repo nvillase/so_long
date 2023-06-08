@@ -6,13 +6,13 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:23:50 by nvillase          #+#    #+#             */
-/*   Updated: 2023/06/05 15:42:15 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/06/08 11:19:58 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void coll_ballon(t_l *l)
+void	coll_ballon(t_l *l)
 {
 	int	i;
 	int	j;
@@ -25,7 +25,7 @@ void coll_ballon(t_l *l)
 		{
 			if (l->map[i][j] == 'C')
 				mlx_put_image_to_window(l->mp, l->wp, l->gB, j * 32, i * 32);
-			if (l->map[i][j] == '1' && i != 0 && j != l->th - 1 
+			if (l->map[i][j] == '1' && i != 0 && j != l->th - 1
 				&& i != l->tv - 1 && j != 0)
 				mlx_put_image_to_window(l->mp, l->wp, l->eu, j * 32, i * 32);
 			if (l->map[i][j] == 'E')
@@ -36,7 +36,8 @@ void coll_ballon(t_l *l)
 		j = 0;
 	}
 }
-void perso(t_l *l)
+
+void	perso(t_l *l)
 {
 	int	i;
 	int	j;
@@ -58,7 +59,8 @@ void perso(t_l *l)
 		i++;
 	}
 }
-int keys(int keycode, t_l *l)
+
+int	keys(int keycode, t_l *l)
 {
 	if (keycode == 119)
 		haut_perso(l);
@@ -70,4 +72,3 @@ int keys(int keycode, t_l *l)
 		droite_perso(l);
 	return (0);
 }
-
