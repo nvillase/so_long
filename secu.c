@@ -6,7 +6,7 @@
 /*   By: nvillase <nvillase@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:03:54 by nvillase          #+#    #+#             */
-/*   Updated: 2023/06/08 11:31:12 by nvillase         ###   ########.fr       */
+/*   Updated: 2023/06/08 17:35:04 by nvillase         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int	secu_all(t_l *l)
 	return (0);
 }
 
-void destroy_image(t_l *l)
+void	destroy_image(t_l *l)
 {
 	mlx_destroy_image(l->mp, l->BD);
 	mlx_destroy_image(l->mp, l->BG);
